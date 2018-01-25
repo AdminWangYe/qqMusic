@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐上传</title>
+</head>
+<body>
+
+    <form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+        歌名：<input type="text" name="title" placeholder="请输入标题"><br><br>
+        类型：<select name="style">
+                <option value="流行">流行</option>
+                <option value="古典">古典</option>
+                <option value="英文">英文</option>
+                <option value="轻音乐">轻音乐</option>
+    </select><br><br>
+
+        歌手：<input type="text" name="singer"><br><br>
+        选择歌手头像：<input type="file" name="header" placeholder="请选择上传歌手的头像"><br><br>
+        选择演唱歌曲：<input type="file" name="music" placeholder="请选择要上传的歌曲"><br><br>
+        <input type="submit" value="确认上传">
+        <input type="reset" value="重新选择">
+
+    </form>
+
+</body>
+</html>

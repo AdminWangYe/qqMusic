@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+
+}
+#bgImg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* 加滤镜实现毛玻璃效果 */
+    filter: blur(100px);
+}
+
+/********音乐控制面板模块**********/
+
+#control{
+    width: 100%;
+    height:100%;
+    position: absolute;
+
+}
+/*#list{*/
+    /*width: 100%;*/
+    /*height:100%;*/
+    /*position: absolute;*/
+    /*background: lightblue;*/
+    /*top:100%;*/
+    /*transition: top 1s;*/
+
+/*}*/
+/* 标题 */
+#title{
+    	width: 100%;
+	/*background: red;*/
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	font-size: 15px;
+	font-family: '黑体';
+	position: absolute;
+	top: 1%;
+
+}
+#singer{
+    width: 100%;color: white;text-align: center;
+	font-weight: 100;font-size: 10px;position: absolute;top: 6%;
+}
+
+/* 头像 */
+#header{
+    width: 80%;
+    padding-bottom: 80%;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+}
+#header img{
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*position: absolute;*/
+    /*border-radius: 50%;*/
+    /*border: 3px lightblue solid;*/
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    border: lightblue 5px solid;
+}
+
+/* 设置一个类 用于控制头像的转动*/
+.rot{
+    animation: rot 10s infinite linear;
+}
+@keyframes rot{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+/* 进度条 */
+.range{
+    width: 70%;
+    position: absolute;
+    bottom: 20%;
+    left: 15%;}
+.currentTime{
+    position: absolute;
+    bottom: 20.9%;
+    left: 5%;
+    font-size: 12px;
+    color: black;}
+.totalTime{
+	position: absolute;bottom: 20.9%;right: 5%;font-size: 12px;color: black;
+}
+/* 控制按钮 */
+#playMode{
+    width:7%;
+    position: absolute;
+    left: 5%;
+    bottom: 11%;
+}
+#playPre{
+    width:12%;
+    position: absolute;
+    left: 20%;
+    bottom: 9.5%;
+}
+#play{
+    width:12%;
+    position: absolute;
+    left: 44%;
+    bottom: 9.5%;
+}
+#playNext{
+    width:12%;
+    position: absolute;
+    right: 20%;
+    bottom: 9.5%;
+}
+#playList{
+    width:7%;
+    position: absolute;
+    right: 5%;
+    bottom: 11%;
+}
+#love{
+    width:7%;
+    position: absolute;
+    left: 12%;
+    bottom: 2%;
+}
+
+/* 控制面板 下一排 */
+#download{
+    width:7%;
+    position: absolute;
+    left: 35%;
+    bottom: 2%;
+}
+#share{
+    width:7%;
+    position: absolute;
+    right: 35%;
+    bottom: 2%;
+}
+#more{
+    width:7%;
+    position: absolute;
+    right: 12%;
+    bottom: 2%;
+}
+
+
+
+/*************音乐列表模块***********/
+.musicList{
+	width: 100%;
+	height: 100%;
+	/*background: red;*/
+	position: absolute;
+	top: 100%;
+	transition: top 1s;
+}
+.listDis{
+    width: 100%;height: 100%;position: absolute;
+}
+.musicBox{
+    width: 100%;height: 66%;
+	background: rgba(100,100,100,0.8);
+	position: absolute;bottom: 0;
+}
+
+.closeList{
+    width: 100%;height: 10%;text-align: center;
+    position: absolute;bottom: 0;color: white;
+    border-top: 1px white solid;
+}
+
+/*列表中控制按钮*/
+.listCtrl{width: 100%;height: 10%;border-bottom: 1px white solid;position: absolute;top: 0;}
+.listMode{width: 7%;position: absolute;left:5%;top: 30%;}
+.listModeP{font-size: 12px;color: white;position: absolute;left: 13%;top:35%;}
+.listDown{width: 5%;position: absolute;right: 35%;top: 30%;}
+.moreAdd{width: 5%;position: absolute;right: 20%;top: 30%;}
+.moreTrash{width: 5%;position: absolute;right: 5%;top: 30%;}
+
+/*音乐列表*/
+.mList{
+	width: 100%;
+	height: 80%;
+	position: absolute;
+	top: 10%;
+	/*background: red;*/
+	overflow: scroll;
+}
+
+.music{
+	width: 100%;
+	height: 40px;
+	/*background: red;*/
+	border-bottom:2px grey solid;
+	position: relative;
+}
+.music .musname{
+	color: white;
+	float: left;
+	font-weight: 300;
+	font-size: 15px;
+	margin: 12px 5px 0px;
+
+}
+.music .singername{
+	float: left;
+	font-size: 10px;
+	margin-top: 16px;
+	color: darkgrey;
+}
+
+.music .delBtn{
+	width: 4%;
+	margin: 13px;
+	float: right;
+}
+
+.music .loveBtn{
+	width: 6%;
+	margin: 12px 0px 0px;
+	float: right;
+}
+
+.music .wave{
+	float: left;
+	margin-top: 16px;
+	margin-left: 5px;
+}
+
+
+.selected .musname,.selected .singername{
+	color: darkgreen;
+}

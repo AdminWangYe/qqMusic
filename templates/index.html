@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music音乐盒</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <script type="text/javascript" src="/static/js/ajaxRequest.js"></script>
+    <script type="text/javascript" src="/static/js/audioModel.js"></script>
+    <script type="text/javascript" src="/static/js/music.js"></script>
+    <script type="text/javascript" src="/static/js/musicList.js"></script>
+</head>
+<body>
+
+    <div id="box">
+        <img src="/media/bg/1.jpg" id="bgImg">
+        <div id="control">
+            <p id="title">年轮</p>
+            <p id="singer">——&nbsp;<span>王力宏</span>&nbsp;——</p>
+            <div id="header">
+                <img src="/media/headerimg/deng.jpg" class="rot"  >
+            </div>
+            <p class="currentTime">1.54</p>
+			<input type="range" class="range">
+			<p class="totalTime">5.34</p>
+            <img src="/static/source/playModeLoop.png" id="playMode">
+            <img src="/static/source/playPreview.png" id="playPre">
+            <img src="/static/source/play.png" id="play">
+            <img src="/static/source/playNext.png" id="playNext">
+            <img src="/static/source/playList.png" id="playList">
+            <img src="/static/source/statusBarLove.png" id="love">
+            <img src="/static/source/playBarDownload.png" id="download">
+            <img src="/static/source/share.png" id="share">
+            <img src="/static/source/cellMore.png" id="more">
+        </div>
+
+       <div class="musicList">
+			<!-- 在这里自定制音乐的列表 -->
+			<div class="listDis"></div>
+			<div class="musicBox">
+				<div class="listCtrl">
+					<img src="/static/source/playModeLoop.png" class="listMode">
+					<p class="listModeP">随机播放(100首)</p>
+					<img src="/static/source/playBarDownload.png" class="listDown">
+					<img src="/static/source/more_addTo.png" class="moreAdd">
+					<img src="/static/source/more_trash.png" class="moreTrash">
+				</div>
+
+				<div class="mList">
+
+				</div>
+
+				<p class="closeList">关闭</p>
+			</div>
+		</div>
+    </div>
+
+    <audio id="musicPlayer"></audio>
+</body>
+</html>
